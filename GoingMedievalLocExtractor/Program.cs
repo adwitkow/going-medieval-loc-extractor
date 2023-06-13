@@ -13,8 +13,8 @@ if (args.Length != 1)
 
 var path = args[0];
 
-var transformer = new LocalizationReader();
-var dictionary = transformer.Transform(path);
+var reader = new LocalizationReader();
+var dictionary = reader.Read(path);
 
 var json = JsonConvert.SerializeObject(dictionary, Formatting.Indented);
 File.WriteAllText("output.json", json);

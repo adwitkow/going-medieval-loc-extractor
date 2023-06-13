@@ -7,7 +7,7 @@ namespace GoingMedievalLocExtractor
         private static readonly string termProperty = "- Term:";
         private static readonly int termLength = termProperty.Length;
 
-        public Dictionary<string, string> Transform(string path)
+        public Dictionary<string, string> Read(string path)
         {
             var lines = new Dictionary<string, string>();
 
